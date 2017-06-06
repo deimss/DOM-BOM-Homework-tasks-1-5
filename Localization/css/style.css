@@ -1,0 +1,19 @@
+.lang {
+  display: none;
+}
+
+.lang.visible {
+  display: inline;
+  // @todo: visibility? font-size? etc?
+}
+
+#fieldForText {
+  border: 1px solid;
+  width: 300px;
+  padding: 3px;
+}
+
+#save {
+  margin-top: 10px;
+
+}
