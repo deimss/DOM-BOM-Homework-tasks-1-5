@@ -1,4 +1,27 @@
+function currentL(){
+  var inpUa = document.querySelector('input[value=ua]');
+  var inpRu = document.querySelector('input[value=ru]');
+  var inpEng = document.querySelector('input[value=eng]');
+  var currnetLang = localStorage.getItem('language');
+  var myDiv = document.getElementById('fieldForText');
+  if (currnetLang == null){
+    alert('Виберіть мову!');
+  }else {
+      alert('Now, languages is : '+ currnetLang);
+  }
+  if (currnetLang == 'ua'){
+    inpUa.setAttribute('checked','checked');
+    myDiv.innerHTML = 'Привіт , username! Раді тебе бачити!';
 
+  }else if (currnetLang == 'ru') {
+    inpRu.setAttribute('checked','checked');
+    myDiv.innerHTML = 'Привет, username! Раде тебя видеть!';
+  }else if (currnetLang == 'eng'){
+    inpEng.setAttribute('checked','checked');
+    myDiv.innerHTML = 'Hi, username! Council to see you!';
+  }
+}
+currentL();
  //change language ,depends on radio-button
 function check (){
   var myDiv = document.getElementById('fieldForText');

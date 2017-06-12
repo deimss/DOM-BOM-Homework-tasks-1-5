@@ -59,10 +59,13 @@ addElem();
   //Validate field name -- end
 
     //Validate field date -- start
-  var regV3 = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
+  var d = new Date();
+  var curr_date = d.getDate();
+  var curr_month = '0' + (d.getMonth()+1);
+  var curr_year = d.getFullYear();
+  var dateNow = curr_date + "/" + curr_month + "/" + curr_year;
   var dateField = document.querySelector('input[name=date]').value;
-  var result3 = dateField.match(regV3);
-  if (dateField.length === 0 || result3 === null){
+  if (dateField != dateNow ){
     alert('Заповніть поле date коректно!');
     dateField = false;
   }
